@@ -23,7 +23,7 @@ public class CarDataService2 {
         HtmlPage page = null;
         try {
             page = webClient.getPage("https://car.autohome.com.cn/photolist/spec/41517/p1/");//尝试加载上面图片例子给出的网页
-
+            
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
