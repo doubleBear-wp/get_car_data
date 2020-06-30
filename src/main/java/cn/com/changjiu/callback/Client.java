@@ -17,6 +17,12 @@ public class Client implements CSCallBack {
 
         System.out.println("客户端：发送的消息为：" + msg);
 
+
+        //这种不通过子线程直接调用的方式为同步回调
+//        server.getClientMsg(Client.this,msg);
+
+
+        //以下方式为异步回调
         new Thread(new Runnable() {
 
             @Override
