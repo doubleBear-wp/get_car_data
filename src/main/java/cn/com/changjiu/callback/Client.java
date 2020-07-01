@@ -13,8 +13,8 @@ public class Client implements CSCallBack {
 
     }
 
-    public void sendMsg(final String msg){
-
+    public void sendMsg(final String msg){//声明为final是为了让（局部）内部类可以使用，否则该方法执行完该变量生命结束，
+                                        // 内部类所在线程开始执行的话，会导致内部类获取不到该值，用final修饰为常量
         System.out.println("客户端：发送的消息为：" + msg);
 
 
